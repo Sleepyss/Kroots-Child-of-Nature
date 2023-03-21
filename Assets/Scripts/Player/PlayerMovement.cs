@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField, Range(0f, 100f)] private float Speed = 10f;
-    [SerializeField, Range(0f, 100f)] private float MaxSpeed = 20f;
+    [SerializeField, Range(0f, 100f)] private float Speed = 4f;
+    [SerializeField, Range(0f, 100f)] private float MaxSpeed = 100f;
     [SerializeField, Range(0f, 100f)] private float MaxSpeedAir = 15f;
 
     private Vector2 direction;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {   
         direction.x = Input.GetAxisRaw("Horizontal");
-        desiredSpeed = new Vector2(direction.x, 0f) * Mathf.Max(Speed - gd.getFriction(), 0f);
+        desiredSpeed = new Vector2(direction.x, 0f) * Speed;
         
     }
 
