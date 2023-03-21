@@ -1,7 +1,7 @@
 # Kroots-Child-of-Nature
 
 Gameplay Mechanics : 
-1. Movement (Left Right) : Done
+1. Movement (Left Right) : ✅ Done
 2. Jump 
 3. Camera Following Player
 4. Dodge
