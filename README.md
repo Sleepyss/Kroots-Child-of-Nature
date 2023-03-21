@@ -9,6 +9,7 @@ Gameplay Mechanics :
 6. Attack
 
 Game Asset Stats :
+
 Player : 
   1. Health
   2. Damage
