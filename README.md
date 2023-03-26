@@ -1,15 +1,17 @@
 # Kroots-Child-of-Nature
 
-Gameplay Mechanics : 
+Gameplay Mechanics 
+{
 1. Movement (Left Right) : ✅ Done
 2. Jump : ✅ Done
 3. Camera Following Player : ✅ Done
-4. Dodge 
+4. Dodge : ➖ (In Progress)
 5. Skills 
 6. Attack
+}
 
-Game Asset Stats :
-
+Game Asset Stats 
+{
 Player : 
   1. Health
   2. Damage
@@ -19,7 +21,17 @@ Enemy :
   1. Health
   2. Damage
   3. Speed
+}
 
-Enemy Type : 
+Enemy Type
+{
   1. Ants 
+  TBD (To Be Added)
+} 
+
+Companion Type
+{
+  TBD (To Be Added)
+}
+  
  
