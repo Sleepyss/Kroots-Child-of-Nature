@@ -2,9 +2,9 @@
 
 Gameplay Mechanics : 
 1. Movement (Left Right) : ✅ Done
-2. Jump 
-3. Camera Following Player
-4. Dodge
+2. Jump : ✅ Done
+3. Camera Following Player : ✅ Done
+4. Dodge 
 5. Skills 
 6. Attack
 
