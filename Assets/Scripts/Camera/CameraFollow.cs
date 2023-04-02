@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private float offsetY;
 
-    [SerializeField] private float FollowSpeed = 2f;
+    [SerializeField] private float FollowSpeed = 5f;
 
     // Update is called once per frame
     void Update()

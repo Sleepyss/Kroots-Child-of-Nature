@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private float jumpVelo = 10f;
+    [SerializeField] private float jumpVelo = 9f;
     [SerializeField] private LayerMask plaform;
+
+    public Animator animator;
 
     private Rigidbody2D rb;
     private Vector2 velocity;
@@ -22,6 +24,13 @@ public class PlayerJump : MonoBehaviour
     {
         if(OnGround() && Input.GetButtonDown("Jump")){
             rb.velocity = Vector2.up * jumpVelo;
+            animator.SetBool("Jump", true);
+            animator.SetFloat("JumpVelo", rb.velocity.y);
+        }
+
+        if(rb.velocity.y <= 0){
+            animator.SetBool("Jump", false);
+            animator.SetFloat("JumpVelo", rb.velocity.y);
         }
     }
 

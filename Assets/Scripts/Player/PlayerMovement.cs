@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Move
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 5f;
+    public Animator animator;
     private bool isFacingRight = true;
     private float inputMove = 0f;
 
     // Dash
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPow = 20f;
+    [SerializeField] private float dashingPow = 10f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = transform.GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -31,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
         inputMove = Input.GetAxisRaw("Horizontal");
         Flip();
+
+        animator.SetFloat("Speed", Mathf.Abs(inputMove));
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash){
             StartCoroutine(Dash());
