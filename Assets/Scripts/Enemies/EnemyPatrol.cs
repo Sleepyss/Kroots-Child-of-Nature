@@ -9,6 +9,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField] private Transform enemy;
     [SerializeField] private float speed;
+
     private Vector3 initScale;
 
     private bool movingLeft;
@@ -21,10 +22,6 @@ public class EnemyPatrol : MonoBehaviour
     void Awake()
     {
         initScale = enemy.localScale;
-    }
-
-    private void OnDisable() {
-        anim.SetFloat("Speed", 0);
     }
 
     // Update is called once per frame
@@ -46,7 +43,6 @@ public class EnemyPatrol : MonoBehaviour
     }
 
     private void flip(){
-        anim.SetFloat("Speed", 0);
 
         idleTimer += Time.deltaTime;
 
@@ -58,8 +54,6 @@ public class EnemyPatrol : MonoBehaviour
 
     private void MoveDirection(int _direction){
         idleTimer = 0;
-
-        anim.SetFloat("Speed", 1);
 
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
 

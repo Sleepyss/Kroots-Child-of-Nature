@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         if(PlayerInsight()){
             if(cooldownTimer >= attackCooldown){
                 cooldownTimer = 0;
+                animator.SetTrigger("Attack");
                 Debug.Log("You got hit");
             }
         }

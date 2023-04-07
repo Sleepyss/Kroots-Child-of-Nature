@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
 
+    [SerializeField] private Animator anim;
     public Transform attackPoint;
     public float range = 0.5f;
     public LayerMask enemy;
@@ -17,7 +18,8 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         if(Time.time >= nextAttackTime){
-            if(Input.GetKeyDown(KeyCode.Space)){
+            if(Input.GetKeyDown(KeyCode.Z)){
+                anim.SetTrigger("Attack");
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
@@ -32,7 +34,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected() {
+    void OnDrawGizmos() {
         if(attackPoint == null){
             return;
         }

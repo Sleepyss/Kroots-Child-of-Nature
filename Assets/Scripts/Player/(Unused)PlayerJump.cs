@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private float jumpVelo = 9f;
+    [SerializeField] private float jumpVelo = 7f;
     [SerializeField] private LayerMask plaform;
 
     public Animator animator;
