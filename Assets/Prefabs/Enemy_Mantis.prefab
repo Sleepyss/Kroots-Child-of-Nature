@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8427682414434543341}
   - component: {fileID: 8634073630332041440}
   - component: {fileID: 7570220972254419487}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Enemy_Mantis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   bx: {fileID: 1575794537880144243}
   player:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1032
   animator: {fileID: 7570220972254419487}
 --- !u!95 &7570220972254419487
 Animator:

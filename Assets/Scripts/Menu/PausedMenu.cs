@@ -9,6 +9,8 @@ public class PausedMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject waypoint;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -18,6 +20,10 @@ public class PausedMenu : MonoBehaviour
                 Pause();
             }
         }
+    }
+
+    public void NextLevel(){
+        SceneManager.LoadScene("Level 2 (Boss Fight)");
     }
 
     public void Resume(){

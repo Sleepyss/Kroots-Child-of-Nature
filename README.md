@@ -6,34 +6,33 @@
     2. Jump : ✅ Done
     3. Camera Following Player : ✅ Done
     4. Dodge : ✅ Done
-    5. Skills
-    6. Player Attack : ✅ Done
+    5. Player Attack : ✅ Done
+    6. Skills : TBA
   
   ### Enemy : 
     1. Enemy Attack : ✅ Done
     2. Enemy Patrol : ✅ Done
-    3. 
 
 
 ## Game Asset Stats 
   ### Player : 
-    1. Health
-    2. Damage
-    3. Speed
+    1. Health : ✅ Done
+    2. Damage : ✅ Done
+    3. Speed : ✅ Done
 
   ### Enemy :
-    1. Health
-    2. Damage
-    3. Speed
+    1. Health : ✅ Done
+    2. Damage : ✅ Done
+    3. Speed : ✅ Done
 
 
 ## Enemy Type
   1. Melee Enemy : ✅ Done
-  2. Ranged Enemy
-  3. Boss Enemy
+  2. Ranged Enemy : TBA
+  3. Boss Enemy : ✅ Done
   
 
 
-## Companion Type
+## Companion Type (TBA)
   
  
