@@ -6,21 +6,28 @@ public class PlayerCombat : MonoBehaviour
 {
 
     [SerializeField] private Animator anim;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject[] peluru;
     public Transform attackPoint;
     public float range = 0.5f;
     public LayerMask enemy;
-    public int attackDamage = 40;
+    public int attackDamage = 1;
 
-    public float attackRate = 2f;
+    public float attackRate = 1f;
     float nextAttackTime = 0f;
 
     // Update is called once per frame
     void Update()
     {
         if(Time.time >= nextAttackTime){
-            if(Input.GetKeyDown(KeyCode.Z)){
+            if(Input.GetKeyDown(KeyCode.J)){
                 anim.SetTrigger("Attack");
                 Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+            if(Input.GetKeyDown(KeyCode.K)){
+                anim.SetTrigger("Shoot");
+                Shoot();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -34,7 +41,11 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos() {
+    private void Shoot(){
+        peluru[0].transform.position = firePoint.position;
+        peluru[0].GetComponent<Player_Projectiles>().setDirection(Mathf.Sign(transform.localScale.x));
+    }
+    void OnDrawGizmosSelected() {
         if(attackPoint == null){
             return;
         }

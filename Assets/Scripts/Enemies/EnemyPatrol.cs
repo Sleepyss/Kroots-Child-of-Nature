@@ -45,6 +45,7 @@ public class EnemyPatrol : MonoBehaviour
     private void flip(){
 
         idleTimer += Time.deltaTime;
+        anim.SetBool("Moving", false);
 
         if(idleTimer > idle){
             movingLeft = !movingLeft;
@@ -54,6 +55,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void MoveDirection(int _direction){
         idleTimer = 0;
+        anim.SetBool("Moving", true);
 
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
 
